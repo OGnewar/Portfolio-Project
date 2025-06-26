@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row align-items-center">
+  <div
+    class="col-md-6 text-center text-md-start"
+    style="font-family: Montserrat, sans-serif"
+  >
+    <p style="font-size: 36px; color: #0b1469; margin: 50px 0 -80px 0">
+      Hi, I’m <strong>Saujanya Shrestha</strong>!
+    </p>
+    <p
+      style="
+        font-size: 130px;
+        color: #fd942c;
+        margin: 40px 0 -50px 0;
+        font-weight: 900;
+      "
+    >
+      GRAPHIC
+    </p>
+    <p
+      style="
+        font-size: 120px;
+        color: #0b1469;
+        margin: -90px 0 -25px 0;
+        font-weight: 900;
+      "
+    >
+      DESIGNER
+    </p>
+    <hr />
+    <p style="font-family: Poppins, sans-serif">
+      Saujanya is a passionate and creative designer with over 3 years of
+      experience in graphics design. He has delved into UI/UX design creating
+      intuitive and user-friendly interfaces for mobile and web applications as
+      well. With experience in entry-level frontend development, he continues to
+      expand his horizons in the field of design, development and innovation.
+    </p>
+    <hr />
+    <p style="font-family: Poppins, sans-serif; color: #2232c4">
+      Check out some of his works from the navbar above.
+    </p>
+  </div>
+
+  <div class="col-md-6 text-center mt-4 mt-md-0">
+    <img
+      src="{{ url_for('static', filename='images/hero2.png') }}"
+      alt="Graphic Illustration"
+      class="img-fluid"
+    />
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,162 @@
+{% extends 'base.html' %} {% block content %}
+<h2
+  class="text-center"
+  style="
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: Poppins, sans-serif;
+  "
+>
+  UI/UX PROTOTYPES
+</h2>
+<hr />
+<h3
+  class="text-center"
+  style="
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: Poppins, sans-serif;
+  "
+>
+  Shrestha Coffee - Mobile Application
+</h3>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <!--VIDEO CARD-->
+  <div class="col">
+    <div class="card h-100">
+      <div class="ratio ratio-16x9">
+        <video controls>
+          <source
+            src="{{ url_for('static', filename='videos/a1.mp4') }}"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Mobile App Prototype</h5>
+        <p class="card-text">
+          Demonstrates the interaction flow of a food delivery app.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--VIDEO CARD-->
+  <div class="col">
+    <div class="card h-100">
+      <div class="ratio ratio-16x9">
+        <video controls>
+          <source
+            src="{{ url_for('static', filename='videos/a2.mp4') }}"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Website Redesign Prototype</h5>
+        <p class="card-text">
+          A walk-through of a modernized user-friendly homepage layout.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--VIDEO CARD-->
+  <div class="col">
+    <div class="card h-100">
+      <div class="ratio ratio-16x9">
+        <video controls>
+          <source
+            src="{{ url_for('static', filename='videos/a3.mp4') }}"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Website Redesign Prototype</h5>
+        <p class="card-text">
+          A walk-through of a modernized user-friendly homepage layout.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+<hr />
+<h3
+  class="text-center"
+  style="
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: Poppins, sans-serif;
+  "
+>
+  ShresthaG - Portfolio Website
+</h3>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <!--VIDEO CARD-->
+  <div class="col">
+    <div class="card h-100">
+      <div class="ratio ratio-16x9">
+        <video controls>
+          <source
+            src="{{ url_for('static', filename='videos/b.mp4') }}"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Mobile App Prototype</h5>
+        <p class="card-text">
+          Demonstrates the interaction flow of a food delivery app.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+<hr />
+<h3
+  class="text-center"
+  style="
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: Poppins, sans-serif;
+  "
+>
+  SkillSync - Resume Ranking System
+</h3>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <!--VIDEO CARD-->
+  <div class="col">
+    <div class="card h-100">
+      <div class="ratio ratio-16x9">
+        <video controls>
+          <source
+            src="{{ url_for('static', filename='videos/c.mp4') }}"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Mobile App Prototype</h5>
+        <p class="card-text">
+          Demonstrates the interaction flow of a food delivery app.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br /><br /><br />
+{% endblock %}

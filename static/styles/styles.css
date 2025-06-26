@@ -1,0 +1,67 @@
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+.container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out 0.3s;
+}
+
+body.loaded .container {
+  opacity: 1;
+}
+
+#modalImage {
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+.modal-body {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: transparent; /* transparent background */
+  overflow: hidden;
+  border: none;
+  box-shadow: none;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
+
+.thumbnail-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+

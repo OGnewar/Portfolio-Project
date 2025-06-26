@@ -1,0 +1,143 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2
+  class="text-center"
+  style="
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: Poppins, sans-serif;
+  "
+>
+  ILLUSTRATIONS
+</h2>
+<hr />
+<!-- IMAGE GRID -->
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <!-- IMAGE CARD -->
+  <div class="col">
+    <div class="card h-100">
+      <div class="thumbnail-wrapper">
+        <img
+          src="{{ url_for('static', filename='images/Illustrations/1.jpg') }}"
+          class="card-img-top img-thumbnail poster-img"
+          alt="Concert Poster"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          data-img-src="{{ url_for('static', filename='images/illustrations/1.jpg') }}"
+          data-title="Front"
+          data-desc="Front of PioneerHub buiness card."
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Business Card Front</h5>
+        <p class="card-text">Front of PioneerHub buiness card.</p>
+      </div>
+    </div>
+  </div>
+  <!-- IMAGE CARD -->
+  <div class="col">
+    <div class="card h-100">
+      <div class="thumbnail-wrapper">
+        <img
+          src="{{ url_for('static', filename='images/Illustrations/2.jpg') }}"
+          class="card-img-top img-thumbnail poster-img"
+          alt="Concert Poster"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          data-img-src="{{ url_for('static', filename='images/illustrations/2.jpg') }}"
+          data-title="Front"
+          data-desc="Front of PioneerHub buiness card."
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Business Card Front</h5>
+        <p class="card-text">Front of PioneerHub buiness card.</p>
+      </div>
+    </div>
+  </div>
+  <!-- IMAGE CARD -->
+  <div class="col">
+    <div class="card h-100">
+      <div class="thumbnail-wrapper">
+        <img
+          src="{{ url_for('static', filename='images/Illustrations/3.jpg') }}"
+          class="card-img-top img-thumbnail poster-img"
+          alt="Concert Poster"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          data-img-src="{{ url_for('static', filename='images/illustrations/3.jpg') }}"
+          data-title="Front"
+          data-desc="Front of PioneerHub buiness card."
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Business Card Front</h5>
+        <p class="card-text">Front of PioneerHub buiness card.</p>
+      </div>
+    </div>
+  </div>
+  <!-- IMAGE CARD -->
+  <div class="col">
+    <div class="card h-100">
+      <div class="thumbnail-wrapper">
+        <img
+          src="{{ url_for('static', filename='images/Illustrations/4.jpg') }}"
+          class="card-img-top img-thumbnail poster-img"
+          alt="Concert Poster"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          data-img-src="{{ url_for('static', filename='images/illustrations/4.jpg') }}"
+          data-title="Front"
+          data-desc="Front of PioneerHub buiness card."
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Business Card Front</h5>
+        <p class="card-text">Front of PioneerHub buiness card.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="imageModal"
+    tabindex="-1"
+    aria-labelledby="imageModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="" id="modalImage" alt="Expanded poster image" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+
+    // Set image src from clicked thumbnail
+    document.querySelectorAll(".poster-img").forEach((img) => {
+      img.addEventListener("click", function () {
+        const src = this.getAttribute("data-img-src");
+        modalImage.src = src;
+      });
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener("click", function (e) {
+      if (!modalImage.contains(e.target)) {
+        const modalInstance = bootstrap.Modal.getInstance(modal);
+        modalInstance.hide();
+      }
+    });
+  });
+</script>
+
+{% endblock %}
